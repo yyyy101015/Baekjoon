@@ -6,8 +6,8 @@ public class P1157 {
         String input = sc.nextLine().toUpperCase();
         int[] alphabet = new int[26];
 
-        for(int i = 0; i < input.length(); i++) {
-            alphabet[(int)input.charAt(i) - 65]++;
+        for (int i = 0; i < input.length(); i++) {
+            alphabet[(int) input.charAt(i) - 65]++;
         }
 
         int max = -1;
@@ -15,12 +15,10 @@ public class P1157 {
         for (int i = 0; i < alphabet.length; i++) {
             if (max == alphabet[i]) {
                 answer = '?';
-            }
-            else if (max < alphabet[i]) {
-                answer = (char)(i + 65);
+            } else if (max < alphabet[i]) {
+                answer = (char) (i + 65);
                 max = alphabet[i];
             }
-
         }
 
         System.out.println(answer);
